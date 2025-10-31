@@ -7,7 +7,7 @@ function MainNavigation() {
   return (
     <>
     <Navbar />
-    <Outlet />
+    <Outlet /> {/* renders the child routes here */}
     <Footer />
 
     

@@ -6,7 +6,7 @@ import MainNavigation from './Components/MainNavigation'
 import axios from 'axios'
 
 
-const getallRecipes=async()=>{
+const getallRecipes=async()=>{ //adds a loader to the home page to fetch all recipes
   let allRecipes=[]
   await axios.get('http://localhost:5000/recipe').then((res)=>{
     allRecipes=res.data
@@ -21,7 +21,7 @@ const getallRecipes=async()=>{
 
 const router=createBrowserRouter([
   {path:"/",element:<MainNavigation/>,children:[
-    {path:"/",element:<Home/>,loader:getallRecipes}
+    {path:"/",element:<Home/>,loader:getallRecipes} //home page with all recipes loaded
   ]},
 ])
 
