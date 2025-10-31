@@ -10,7 +10,7 @@ const getallRecipes=async()=>{ //adds a loader to the home page to fetch all rec
   let allRecipes=[]
   await axios.get('http://localhost:5000/recipe').then((res)=>{
     allRecipes=res.data
-  }).catch((err)=>{
+  }).catch((err)=>{ 
     console.log(err)
   })
   return allRecipes
