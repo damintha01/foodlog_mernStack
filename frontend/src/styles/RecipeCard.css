@@ -1,0 +1,159 @@
+.recipe-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.recipe-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.recipe-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.recipe-card:hover .recipe-image img {
+  transform: scale(1.1);
+}
+
+.recipe-content {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.recipe-content h3 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.recipe-time {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #667eea;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.time-icon {
+  font-size: 1.2rem;
+}
+
+.recipe-ingredients {
+  margin-bottom: 1rem;
+}
+
+.recipe-ingredients strong {
+  color: #555;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.recipe-ingredients ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.recipe-ingredients li {
+  padding: 0.3rem 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.recipe-ingredients li::before {
+  content: "✓ ";
+  color: #667eea;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.recipe-instructions {
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.recipe-instructions strong {
+  color: #555;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.recipe-instructions p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.recipe-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.recipe-actions button {
+  flex: 1;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-edit {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-edit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.btn-delete {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+  color: white;
+}
+
+.btn-delete:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.4);
+}
+
+@media (max-width: 768px) {
+  .recipe-card {
+    margin: 0.5rem;
+  }
+
+  .recipe-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .recipe-actions {
+    flex-direction: column;
+  }
+
+  .recipe-actions button {
+    width: 100%;
+  }
+}
